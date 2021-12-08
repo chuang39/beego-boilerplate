@@ -18,9 +18,6 @@ func main() {
 	// Blocking main and waiting for shutdown.
 	select {
 	case <-mainCtx.Done():
-		logger.Info("main : Terminate signal catched")
-		logger.Info("main : Start shutdown...")
-
 		//Call stop function to unregisters the signal behavior
 		mainCtxCancel()
 
